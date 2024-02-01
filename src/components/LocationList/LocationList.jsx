@@ -6,7 +6,7 @@ export default function LocationList() {
   if (isLoading) {
     return <h2>Loading...</h2>;
   }
-  console.log(data);
+  // console.log(data);
   return (
     <div className="nearbyLocation">
       <h2 className="">Nearby Locations</h2>

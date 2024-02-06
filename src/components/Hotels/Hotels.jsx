@@ -5,7 +5,7 @@ import { MdEuroSymbol } from "react-icons/md";
 import { useHotels } from "../context/HotelsProvider";
 
 function Hotels() {
-  const { isLoading, hotels } = useHotels();
+  const { isLoading, hotels, currentHotel } = useHotels();
 
   if (isLoading) {
     return <Loader />;
@@ -19,7 +19,11 @@ function Hotels() {
             key={item.id}
             to={`/hotels/${item.id}?lat=${item.latitude}&lng=${item.longitude}`}
           >
-            <div className="searchItem">
+            <div
+              className={`searchItem ${
+                item.id === currentHotel?.id ? "current-hotel" : ""
+              }`}
+            >
               <img src={item.picture_url.url} alt={item.name} loading="lazy" />
               <div className="locationItemDesc">
                 <p className="location">{item.smart_location}</p>

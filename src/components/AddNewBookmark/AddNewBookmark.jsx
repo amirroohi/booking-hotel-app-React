@@ -58,6 +58,7 @@ function AddNewBookmark() {
     };
 
     await createBookmark(newBookmark);
+    navigate("/bookmarks");
   };
 
   if (isLoadingGeoCoding) return <Loader />;

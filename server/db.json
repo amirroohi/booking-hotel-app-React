@@ -1334,15 +1334,6 @@
       "id": 1
     },
     {
-      "cityName": "Mahidasht",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.32869425037187",
-      "longitude": "46.724183117022086",
-      "host_location": "Mahidasht Iran (Islamic Republic of)",
-      "id": 4
-    },
-    {
       "cityName": "Sanandaj",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
@@ -1370,24 +1361,6 @@
       "id": 8
     },
     {
-      "cityName": "Khomam",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "37.38041561169611",
-      "longitude": "49.601898193359375",
-      "host_location": "Khomam Iran (Islamic Republic of)",
-      "id": 9
-    },
-    {
-      "cityName": "Malayer",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.30079109863022",
-      "longitude": "48.83422851562501",
-      "host_location": "Malayer Iran (Islamic Republic of)",
-      "id": 10
-    },
-    {
       "cityName": "Borujerd",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
@@ -1395,6 +1368,42 @@
       "longitude": "48.84521484375001",
       "host_location": "Borujerd Iran (Islamic Republic of)",
       "id": 11
+    },
+    {
+      "cityName": "Yazd",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "31.866361730277355",
+      "longitude": "54.3328857421875",
+      "host_location": "Yazd Iran (Islamic Republic of)",
+      "id": 14
+    },
+    {
+      "cityName": "Shiraz",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "29.609759799591348",
+      "longitude": "52.54486083984376",
+      "host_location": "Shiraz Iran (Islamic Republic of)",
+      "id": 15
+    },
+    {
+      "cityName": "Ankara",
+      "country": "Turkiye",
+      "countryCode": "TR",
+      "latitude": "39.87939179599136",
+      "longitude": "32.93701171875001",
+      "host_location": "Ankara Turkiye",
+      "id": 17
+    },
+    {
+      "cityName": "Zanjan",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "36.67370603663577",
+      "longitude": "48.4881591796875",
+      "host_location": "Zanjan Iran (Islamic Republic of)",
+      "id": 18
     }
   ]
 }

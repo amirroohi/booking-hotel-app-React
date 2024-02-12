@@ -1,5 +1,11 @@
 import { MdLocationOn } from "react-icons/md";
-import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
+import {
+  HiCalendar,
+  HiMinus,
+  HiOutlineLogout,
+  HiPlus,
+  HiSearch,
+} from "react-icons/hi";
 import { useRef, useState } from "react";
 import useOutsideClick from "../../hooks/useOutsideClick";
 import "react-date-range/dist/styles.css"; // main style file
@@ -7,11 +13,13 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import {
+  NavLink,
   createSearchParams,
   useNavigate,
   useSearchParams,
   // useSearchParams,
 } from "react-router-dom";
+import { useAuth } from "../context/AuthProvider";
 
 function Header() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -50,8 +58,11 @@ function Header() {
 
   return (
     <div className="header">
+      <NavLink to="/bookmarks">Bookmarks</NavLink>
+
       <div className="headerSearch">
         <div className="headerSearchItem">
+      <span className="seperator"></span>
           <MdLocationOn className="headerIcon locationIcon" />
           <input
             value={destination}
@@ -108,6 +119,7 @@ function Header() {
           </button>
         </div>
       </div>
+      <User />
     </div>
   );
 }
@@ -163,6 +175,29 @@ function OptionItem({ options, type, minLimit, handleOptions }) {
           <HiPlus />
         </button>
       </div>
+    </div>
+  );
+}
+
+function User() {
+  const { isAuthenticated, user, logout } = useAuth();
+  const navigate = useNavigate();
+  function handleLogout() {
+    logout();
+    navigate("/");
+  }
+  return (
+    <div>
+      {isAuthenticated ? (
+        <div>
+          <span style={{ margin: ".5rem" }}>{user.name}</span>
+          <button onClick={handleLogout} className="btn btn--back">
+            <HiOutlineLogout />
+          </button>
+        </div>
+      ) : (
+        <NavLink to="/login">login</NavLink>
+      )}
     </div>
   );
 }
